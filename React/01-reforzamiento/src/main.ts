@@ -1,6 +1,6 @@
 import './style.css'
 
-import './bases/03-object-literal';
+import './bases/05-functions';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <h1>Hello Vite!</h1>
