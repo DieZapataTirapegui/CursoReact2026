@@ -1,3 +1,6 @@
 Curso iniciado hoy con fecha 2 de abril del año 2026
 
 Llevare un registro de los avances diarios en torno al curso, a modo de bitacora.
+
+Viernes 3 se finaliza el capitulo 1, se han aprendido los conceptos basicos de typescript para reforzar este conocimiento.
+
