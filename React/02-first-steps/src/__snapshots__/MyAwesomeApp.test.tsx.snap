@@ -1,0 +1,54 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeApp > should match snapshot 1`] = `
+<div>
+  <div>
+    <h1
+      data-testid="name"
+    >
+      Diego
+    </h1>
+    <h3>
+      Tirapegui
+    </h3>
+    <p
+      class="mi-clase-favorita"
+    >
+       
+      Elden Ring, Hollow Knight, Dark Souls
+    </p>
+    <ul>
+      <li>
+        Elden Ring
+      </li>
+      <li>
+        Hollow Knight
+      </li>
+      <li>
+        Dark Souls
+      </li>
+    </ul>
+    <p>
+      4
+    </p>
+    <h1>
+      Active
+    </h1>
+    <p>
+      Calle Falsa
+      , 
+      12345
+      , 
+      Argentina
+    </p>
+    <p>
+      {"street":"Calle Falsa","zipCode":"12345","country":"Argentina"}
+    </p>
+    <p
+      style="background-color: blue; border-radius: 5px; padding: 10px;"
+    >
+      a
+    </p>
+  </div>
+</div>
+`;

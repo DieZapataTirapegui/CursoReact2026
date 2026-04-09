@@ -1,26 +1,36 @@
-import type { CSSProperties } from "react"
+import { useState, type CSSProperties } from "react"
+// import './ItemCounter.css'
+import styles from './ItemCounter.module.css'
 
 interface ItemCounterProps {
     name: string
     quantity?: number
 }
+ 
+export const ItemCounter = ({ name, quantity = 1 }: ItemCounterProps) => {
 
-// Como puedo hacer funcionar los btones de +1 y -1?
-const styles: CSSProperties = { display: 'flex', 
-    gap: '1rem', alignItems: 'center', 
-    marginBottom: '1rem', 
-    padding: '1rem', 
-    border: '1px solid #ccc', 
-    borderRadius: '8px' }
+  const [count, setCount] = useState(quantity)
 
-export const ItemCounter = ({ name, quantity }: ItemCounterProps) => {
+  const handleAdd = () => {
+    setCount(count + 1)
+  }
+
+  const handleSubtract = () => {
+    if (count===1)return;
+    setCount(count - 1)
+  }
+
+  const style: CSSProperties = { 
+      color: count === 1 ? 'red' : 'black'
+  }
+
   return (
-    <section style={styles}>
-      <span style={{ fontWeight: 'bold' }}>{name}</span>
+    <section className={styles['item-row']} >
+      <span className={styles['item-name']}  style={style}>{name}</span>
 
-        <button>+1</button>
-        <button>{quantity || 0}</button>
-        <button>-1</button>
+        <button onClick={ handleAdd }>+1</button>
+        <button>{count}</button>
+        <button onClick={ handleSubtract }>-1</button>
     </section>
   )
 }

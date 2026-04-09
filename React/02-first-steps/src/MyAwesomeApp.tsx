@@ -20,9 +20,12 @@ export const  MyAwesomeApp = () => {
                         padding: '10px',
                     }
     return (
-        <>
-            <h1>{name}</h1>
+        <div>
+            <h1 data-testid="name">{name}</h1>
             <h3>{surname}</h3>
+
+            <p className="mi-clase-favorita"> { favoriteGames.join(', ')}</p>
+
             <ul>
                 {favoriteGames.map((game, index) => (
                     <li key={index}>{game}</li>
@@ -38,6 +41,6 @@ export const  MyAwesomeApp = () => {
 
                     a
             </p>
-        </>
+        </div>
     )
 }
